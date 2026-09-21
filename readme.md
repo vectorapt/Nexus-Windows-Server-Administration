@@ -1,10 +1,10 @@
-# 🖥️ Project Nexus — Windows Server 2025 & Active Directory Administration Lab
+# 🖥️ Nexus — Windows Server 2025 & Active Directory Administration Lab
 
 ## 📌 Overview
 
-Project Nexus is a hands-on Windows systems administration lab designed to demonstrate the deployment, configuration, and administration of a small enterprise Windows environment.
+Project Nexus is a hands-on Windows systems administration lab demonstrating the deployment, configuration, and administration of a small enterprise Windows environment.
 
-The project simulates two office locations, Dublin and London, using Windows Server 2025 and Windows 11 Pro. It focuses on Active Directory administration, identity and access management, Group Policy, file services, workstation security, and practical troubleshooting.
+The project simulates two office locations, Dublin and London, using Windows Server 2025 and Windows 11 Pro. It focuses on Active Directory, identity and access management, Group Policy, file services, workstation security, and practical administration.
 
 ## 🎯 Objectives
 
@@ -17,21 +17,46 @@ The project simulates two office locations, Dublin and London, using Windows Ser
 - Implement departmental file shares and NTFS permissions
 - Map network drives using Group Policy Preferences
 - Configure workstation security settings
-- Demonstrate application execution control
 - Test authorised and unauthorised access
-- Document administrative procedures and verification results
+- Document configuration and verification results
 
 ## 🧱 Environment
 
-- Windows Server 2025 virtual machine
-- Windows 11 Pro virtual machine
-- VMware virtualisation environment
+- Windows Server 2025
+- Windows 11 Pro
+- VMware virtualisation
 - Active Directory domain: `NEXUS.local`
 - Two simulated office locations: Dublin and London
 - Active Directory Domain Services
 - DNS and DHCP
 - SMB file sharing
 - PowerShell administration
+
+## 👥 Users Created
+
+The lab includes departmental users organised by office location:
+
+### Dublin
+
+- IT
+  - Alex Murphy
+  - David Ryan
+- Finance
+  - James Walsh
+- HR
+  - Emma Doyle
+
+### London
+
+- IT
+  - Sophie Jones
+  - Daniel Smith
+- Finance
+  - George Harris
+- HR
+  - Amelia Taylor
+
+Users are organised within their respective departmental Organizational Units and managed through Active Directory security groups and Group Policy.
 
 ## 🔧 Key Tasks Performed
 
@@ -40,15 +65,15 @@ The project simulates two office locations, Dublin and London, using Windows Ser
 - Configured VMware NAT and isolated internal networking
 - Configured server and workstation network interfaces
 - Assigned static addressing to the domain controller
-- Configured DNS and DHCP services
-- Verified connectivity, name resolution, and network communication
+- Configured DNS and DHCP
+- Verified connectivity and name resolution
 
 ### 🏢 Active Directory Deployment
 
 - Installed Active Directory Domain Services
 - Promoted Windows Server 2025 to a domain controller
 - Created the `NEXUS.local` domain
-- Configured Organizational Units for Dublin and London
+- Created Dublin and London Organizational Units
 - Created departmental OUs for IT, Finance, and HR
 - Created and managed domain users, groups, and computer accounts
 - Joined a Windows 11 workstation to the domain
@@ -57,60 +82,51 @@ The project simulates two office locations, Dublin and London, using Windows Ser
 
 - Created departmental security groups
 - Organised users and computers according to office location
-- Configured access to departmental resources
+- Configured department-based resource access
 - Verified domain authentication
 - Tested authorised and unauthorised resource access
 
 ### ⚙️ Group Policy Administration
 
 - Created and linked computer and user Group Policy Objects
-- Configured workstation security settings
 - Disabled the Guest account through Group Policy
 - Configured user environment restrictions
+- Configured Windows Defender Firewall settings
 - Applied policies according to office location and user department
 - Verified policy application using `gpresult`
 
 ### 📁 File Services & Permissions
 
-- Created departmental SMB shares
+- Created departmental SMB shares for IT, Finance, and HR
 - Configured share and NTFS permissions
-- Applied department-based access control
+- Applied department-based access control using security groups
 - Configured network drive mappings using Group Policy Preferences
 - Used item-level targeting for departmental drive access
-- Tested access to authorised and unauthorised shares
-
-### 🛡️ Workstation Security
-
-- Configured Windows Defender Firewall settings through Group Policy
-- Verified firewall profile status on the domain workstation
-- Configured software restriction policies
-- Demonstrated blocking of a specified test application
-- Verified that unrestricted applications continued to operate normally
+- Tested authorised and unauthorised share access
 
 ### 🧪 Testing & Verification
 
 - Verified domain connectivity and DNS resolution
 - Confirmed successful domain authentication
-- Used PowerShell to inspect users, groups, services, and network settings
+- Used PowerShell to inspect Active Directory objects and system configuration
 - Verified computer and user Group Policy application
 - Tested file-share permissions using different domain accounts
 - Performed authorised and unauthorised access tests
-- Documented configuration results and troubleshooting observations
+- Documented configuration and verification results
 
 ## 🧠 Key Learnings
 
-- Active Directory provides a centralised method for managing users, computers, and access
-- Organizational Units help structure an enterprise environment and apply targeted policies
+- Active Directory provides centralised management of users, computers, and access
+- Organizational Units provide structure for users, computers, and policy application
 - Group Policy enables consistent security and configuration management
-- Share permissions and NTFS permissions work together to control resource access
+- Share and NTFS permissions work together to control resource access
 - Group-based access control is more manageable than assigning permissions individually
 - DNS and DHCP are essential for reliable domain operation
-- Policy verification and practical testing are critical parts of systems administration
-- PowerShell improves administrative efficiency and supports repeatable management tasks
-- Troubleshooting requires checking configuration, connectivity, permissions, and policy application systematically
+- Practical testing and verification are critical parts of systems administration
+- PowerShell supports repeatable administration and environment verification
 
 ## 🚀 Outcome
 
-This project demonstrates practical Windows systems administration skills, including Active Directory deployment, identity and access management, Group Policy administration, file services, workstation security, and PowerShell-based verification.
+Project Nexus demonstrates practical Windows systems administration skills across Active Directory, DNS, DHCP, Group Policy, identity and access management, file services, workstation security, and PowerShell-based administration.
 
-It provides hands-on experience with the core technologies and administrative tasks used in enterprise Windows environments.
+The project provides hands-on experience with core technologies and administrative tasks used in enterprise Windows environments.
