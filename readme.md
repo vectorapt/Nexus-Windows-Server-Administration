@@ -2,7 +2,7 @@
 
 ## 📌 Overview
 
-Project Nexus is a hands-on Windows systems administration lab demonstrating the deployment, configuration, and administration of a small enterprise Windows environment.
+Nexus is a hands-on Windows systems administration lab demonstrating the deployment, configuration, and administration of a small enterprise Windows environment.
 
 The project simulates two office locations, Dublin and London, using Windows Server 2025 and Windows 11 Pro. It focuses on Active Directory, identity and access management, Group Policy, file services, workstation security, and practical administration.
 
